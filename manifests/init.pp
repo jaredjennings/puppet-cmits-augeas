@@ -27,7 +27,7 @@ class augeas {
 # release number, varies between OS releases. Ergo, this big long nest of curly
 # braces:
     case $osfamily {
-        RedHat: {
+        'RedHat': {
             package { "augeas":
                 ensure => present,
             }
@@ -42,7 +42,7 @@ class augeas {
                         ensure => '0.5.0-6',
                     }
                 }
-                default: { unimplemented() }
+                default: { fail "unimplemented on ${::osfamily} ${::operatingsystemrelease}" }
             }
         }
         'Darwin': {
@@ -53,7 +53,7 @@ class augeas {
                     mac_package { 'ruby-augeas-0.4.1-1.pkg': }
                 }
                 '10.9': { warning 'augeas install unimplemented on mavericks' }
-                default: { unimplemented() }
+                default: { fail "unimplemented on ${::osfamily} ${::macosx_productversion_major}" }
             }
         }
     }
