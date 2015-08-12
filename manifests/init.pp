@@ -71,6 +71,7 @@ class augeas {
         '0.9.0' => 'puppet:///modules/augeas/0.9.0/lenses',
         '1.0.0' => 'puppet:///modules/augeas/1.0.0/lenses',
         '1.2.0' => 'puppet:///modules/augeas/1.2.0/lenses',
+        '1.4.0' => '',
         '' => '',
     }
 
