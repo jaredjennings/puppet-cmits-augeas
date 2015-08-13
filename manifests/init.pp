@@ -81,7 +81,7 @@ class augeas {
             source => $lenses_source,
             ignore => ".svn",
             recurse => true, recurselimit => 1,
-            owner => root, group => 0, mode => 0644,
+            owner => root, group => 0, mode => '0644',
         }
 
 # Remove the ones which are no longer valid. (We can't make the copy remove
